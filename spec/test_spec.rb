@@ -1,3 +1,8 @@
+# 文字列をfreezeさせる
+# freeze：オブジェクトの破壊的は変更ができなくなる
+# frzen_string_literal: true
+
+
 describe '四則演算' do
   context '足し算' do
     it '1＋1は2になる' do
@@ -19,7 +24,13 @@ describe '四則演算' do
 
   context '掛け算' do
     it '6*2は12になる' do
-      expect(6*2).to eq 10
+      expect(6*2).to eq 12
+    end
+  end
+
+  context '割り算' do
+    it '6/2は3になる' do
+      expect(6/2).to eq 3
     end
   end
 end
